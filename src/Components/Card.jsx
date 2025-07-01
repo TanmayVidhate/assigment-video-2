@@ -1,7 +1,9 @@
-import React from 'react'
+
 import "./index.css"
 import marvel from "../../src/assets/marvel.jpg"
-import Batches from './batches'
+import Batches from './Batches.jsx'
+import {skillsinfo} from "./data.js"
+
 function Card() {
     return (
         <div className='card-container'>
@@ -12,21 +14,12 @@ function Card() {
                     aliquam doloribus! Reprehenderit, voluptate eligendi quae distinctio maxime 
                     atque eveniet voluptatem 
                 </p>
-                <Batches 
-                    name="IronMan"
-                    emoji="😎"
-                    style={{backgroundColor:"red",color:"white"}}
-                />
-                <Batches 
-                    name="Hulk"
-                    emoji="💪"
-                    style={{backgroundColor:"green",color:"white"}}
-                />
-                <Batches 
-                    name="Captain"
-                    emoji="⚓"
-                    style={{backgroundColor:"blue",color:"white"}}
-                />
+                
+                {
+                    skillsinfo.map((skillinfo,i)=>
+                        <Batches skillinfo={skillinfo} key={i}/>
+                    )
+                }
             </div>
         </div>
     )
