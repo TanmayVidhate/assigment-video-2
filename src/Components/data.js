@@ -1,4 +1,4 @@
-dataobject = [
+const skillsinfo = [
     {
         skill: "Web Design",
         level: "advance",
@@ -18,10 +18,12 @@ dataobject = [
         skill: "Typescript",
         level: "advance",
         color: "#60DAFB"
+    },
+    {
+        skill: "Java",
+        level: "",
+        color: "#ffbf00"
     }
-
 ]
 
-export{
-    dataobject
-}
+export { skillsinfo }
