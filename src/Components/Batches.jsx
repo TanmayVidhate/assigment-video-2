@@ -1,12 +1,15 @@
 import React from 'react'
 import "./index.css"
-function batches(props) {
-    let {name,emoji,style} = props
+function Batches({ skillinfo: { skill, level, color } }) {
     return (
         <>
-            <span style={style} className=''>{name} {emoji}</span>
+            <div className='skilldiv'
+                style={{ background: color }}>
+                {skill} 
+                {level === "advance" ? "🎉" : level === "intermediator" ? "🌟" : level === "beginner" ? "👍" : "👎"}
+            </div>
         </>
     )
 }
 
-export default batches
+export default Batches
